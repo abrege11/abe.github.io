@@ -1,0 +1,946 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1f1b24;
+    width: 100%;
+}
+
+body{
+    height: 500vh;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 49vh auto auto;
+    position: fixed;
+    border-bottom: 1px solid #bb86fc;
+    padding-bottom: 5vh;
+    z-index: 3;
+}
+
+.header .title {
+    position: relative;
+    text-align: left;
+    max-width: fit-content;
+    grid-column: 1; /* Title spans a single column */
+    
+}
+
+.header .title i{
+    color: #1f1b24;
+    text-decoration: none;
+    font: verdana; 
+    font-size: 3.5vh;
+    margin: 0 auto;
+    position: relative;
+    top: 4.5vh;
+    right: 1vh;
+    background-color: #bb86fc;
+    padding: 17px;
+    border-radius: 10px;
+}
+
+.header .navbar .first{
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    grid-column: 2; /* Navbar ul first spans a single column */
+    margin-top: 5vh;
+    margin-left: 7vh;
+}
+
+.header .navbar .first li{
+    display: inline-block;
+    max-width: fit-content;
+    text-decoration: none;
+    margin-right: 70px;
+}
+
+.header .navbar .first li a{
+    color: #bb86fc;
+    font-size: 20px;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.header .navbar_soc .second{
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end; /* Align the second navbar ul to the right */
+    grid-column: 3; /* Navbar ul second spans a single column */
+    margin-top: 5vh; /* Navbar ul second ends at row 2 */
+}
+
+.header .navbar_soc .second li{
+    display: inline-block;
+    max-width: fit-content;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.header .navbar_soc .second li i{
+    font-size: 20px;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.vline{
+    border-left: 2px solid #bb86fc;
+    height: 400vh;
+    position: absolute;
+    top: 101.1vh;
+    left: 50%;
+    z-index: 0;
+    max-width: fit-content;
+}
+
+
+
+.about .first img,
+.about .first .hliner,
+.about .first .hlinel,
+.about .first .text {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.personal .first img,
+.personal .first .hliner,
+.personal .first .hlinel,
+.personal .first .text {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.sports .first img,
+.sports .first .hliner,
+.sports .first .hlinel,
+.sports .first .text {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+
+.about{
+    z-index: 1;
+}
+
+.about .first img{
+    width: 65vh; 
+    height: 40vh; 
+    object-fit: cover; 
+    position: absolute;
+    top: 105vh; 
+    left: 145vh; 
+    transform: translate(-50%, -50%); 
+    z-index: 2;
+    border-radius: 10px;
+    border: 3px solid #bb86fc;
+
+}
+
+.about .first .hliner{
+    border-bottom: 2px solid #bb86fc;
+    position: absolute;
+    bottom: -25vh;
+    max-width: 39vh;    
+    z-index: 0;
+    left: 50%;
+
+}
+
+.about .first .hlinel{
+    border-bottom: 2px solid #bb86fc;
+    position: absolute;
+    bottom: -20vh;
+    max-width: 40%;    
+    z-index: 0;
+    left: 10.1%;
+
+}
+
+.about .first .text{
+    position: absolute;
+    bottom: -35vh;
+    max-width: 60vh;   
+    z-index: 1;
+    left: 10.1%;
+    background-color: #bb86fc;
+    padding: 17px;
+    border-radius: 10px;
+
+}
+
+.sports .first .hliner{
+    border-bottom: 2px solid #bb86fc;
+    position: absolute;
+    bottom: -85vh;
+    max-width: 35%;    
+    z-index: 0;
+    left: 50%;
+}
+
+.sports .first .hlinel{
+    border-bottom: 2px solid #bb86fc;
+    position: absolute;
+    bottom: -90vh;
+    max-width: 40%;    
+    z-index: 0;
+    left: 10.1%;
+}
+
+.sports .first img{
+    width: 70vh; 
+    height: 40vh; 
+    object-fit: cover; 
+    position: absolute;
+    top: 168vh; 
+    left: 15vh; 
+    transform: translate(-50%, -50%); 
+    z-index: 1;
+    border-radius: 10px;
+    border: 3px solid #bb86fc;
+}
+
+.sports .first .text{
+    position: absolute;
+    bottom: -98vh;
+    max-width: 60vh;   
+    z-index: 1;
+    left: 60%;
+    background-color: #bb86fc;
+    padding: 17px;
+    border-radius: 10px;
+}
+
+.personal .first .hliner{
+    border-bottom: 2px solid #bb86fc;
+    position: absolute;
+    bottom: -145vh;
+    max-width: 35%;    
+    z-index: 0;
+    left: 50%;
+}
+
+.personal .first .hlinel{
+    border-bottom: 2px solid #bb86fc;
+    position: absolute;
+    bottom: -150vh;
+    max-width: 40%;    
+    z-index: 0;
+    left: 10.1%;
+}
+
+.personal .first img{
+    width: 65vh; 
+    height: 40vh; 
+    object-fit: cover; 
+    position: absolute;
+    top: 225vh; 
+    left: 135vh; 
+    transform: translate(-50%, -50%); 
+    z-index: 1;
+    border-radius: 10px;
+    border: 3px solid #bb86fc;
+}
+
+.personal .first .text{
+    position: absolute;
+    bottom: -159vh;
+    max-width: 60vh;   
+    z-index: 1;
+    left: 10%;
+    background-color: #bb86fc;
+    padding: 17px;
+    border-radius: 10px;
+}
+
+.app-text{
+    position: relative;
+    top: 25vh;
+    left: 75vh;
+    color: #fff;
+    z-index: 1;
+    max-width: 70vh;
+}
+
+.app-text h1{
+	font-size: 80px;
+	position: relative;
+	font-weight: 700;
+    z-index: 1;
+}
+
+.app-text h1 span{
+	color: #bb86fc;
+
+}
+
+.app-text h1 i{
+	color: #bb86fc; 
+    max-width: fit-content;
+    position: absolute;
+    top: 12vh;
+    left: 27.4vh;
+}
+
+.hlinemain{
+    border-bottom: 2px solid #bb86fc;
+    position: absolute;
+    bottom: -1.3vh;
+    max-width: 100%;    
+    z-index: 1;
+}
+
+
+#projects #first img,
+#projects #first .hliner,
+#projects #first .hlinel,
+#projects #first .text {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+#projects #second img,
+#projects #second .hliner,
+#projects #second .hlinel,
+#projects #second .text {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+#projects #third img,
+#projects #third .hliner,
+#projects #third .hlinel,
+#projects #third .text {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+
+#projects #first .hliner{
+    border-bottom: 2px solid #bb86fc;
+    position: absolute;
+    bottom: -200vh;
+    max-width: 35%;    
+    z-index: 0;
+    left: 50%;
+}
+
+#projects #first .hlinel{
+    border-bottom: 2px solid #bb86fc;
+    position: absolute;
+    bottom: -205vh;
+    max-width: 40%;    
+    z-index: 0;
+    left: 10.1%;
+}
+
+#projects #first img{
+    width: 65vh; 
+    height: 40vh; 
+    object-fit: cover; 
+    position: absolute;
+    top: 285vh; 
+    left: 20vh; 
+    transform: translate(-50%, -50%); 
+    z-index: 1;
+    border-radius: 10px;
+    border: 3px solid #bb86fc;
+}
+
+#projects #first #text{
+    position: absolute;
+    bottom: -211vh;
+    max-width: 60vh;   
+    z-index: 1;
+    left: 60%;
+    background-color: #bb86fc;
+    padding: 17px;
+    border-radius: 10px;
+}
+
+#projects #second .hliner{
+    border-bottom: 2px solid #bb86fc;
+    position: absolute;
+    bottom: -260vh;
+    max-width: 35%;    
+    z-index: 0;
+    left: 50%;
+}
+
+#projects #second .hlinel{
+    border-bottom: 2px solid #bb86fc;
+    position: absolute;
+    bottom: -255vh;
+    max-width: 40%;    
+    z-index: 0;
+    left: 10.1%;
+}
+
+#projects #second img {
+    width: 30vh; /* Adjust this value to your desired width */
+    height: auto; /* Let the height adjust automatically to maintain aspect ratio */
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    position: absolute;
+    top: 325vh;
+    left: 155vh; /* Center horizontally */
+    transform: translate(-50%, -50%) scale(0.5); /* Scale down by 50% and center the image */
+    z-index: 1;
+    border-radius: 10px;
+    border: 3px solid #bb86fc;
+}
+
+#projects #second #text{
+    position: absolute;
+    bottom: -266vh;
+    max-width: 60vh;   
+    z-index: 1;
+    left: 10%;
+    background-color: #bb86fc;
+    padding: 17px;
+    border-radius: 10px;
+}
+
+#projects #third .hliner{
+    border-bottom: 2px solid #bb86fc;
+    position: absolute;
+    bottom: -310vh;
+    max-width: 35%;    
+    z-index: 0;
+    left: 50%;
+}
+
+#projects #third .hlinel{
+    border-bottom: 2px solid #bb86fc;
+    position: absolute;
+    bottom: -315vh;
+    max-width: 40%;    
+    z-index: 0;
+    left: 10.1%;
+}
+
+#projects #third img{
+    width: 67vh; 
+    height: 58vh; 
+    object-fit: cover; 
+    position: absolute;
+    top: 387vh; 
+    left: 20vh; 
+    transform: translate(-50%, -50%) scale(0.5);
+    z-index: 1;
+    border-radius: 10px;
+    border: 3px solid #bb86fc;
+}
+
+#projects #third #text{
+    position: absolute;
+    bottom: -323vh;
+    max-width: 60vh;   
+    z-index: 1;
+    left: 60%;
+    background-color: #bb86fc;
+    padding: 17px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+        background-color: #1f1b24;
+        width: 100%;
+    }
+
+    .header{
+        display: block;
+        grid-template-columns: 49vh auto auto;
+        position: absolute;
+        border-bottom: 1px solid #bb86fc;
+        padding-bottom: 5vh;
+        z-index: 1;
+    }
+
+    body{
+        height: 580vh;
+    }
+    
+    .header .title {
+        position: absolute;
+        text-align: left;
+        max-width: fit-content;
+        
+    }
+    
+    .header .title i{
+        color: #1f1b24;
+        text-decoration: none;
+        font: verdana; 
+        font-size: 3.5vh;
+        margin: 0 auto;
+        position: relative;
+        top: 6vh;
+        left: 1.5vh;
+        background-color: #bb86fc;
+        padding: 17px 50px 17px 50px;
+        border-radius: 10px;
+    }
+    
+    .header .navbar .first{
+        text-decoration: none;
+        list-style-type: none;
+        display: block;
+        position: absolute;
+        margin-top: 15vh;
+        margin-left: 5vh;
+        background: transparent;
+        max-width: fit-content;
+    }
+    
+    .header .navbar .first li{
+        display: block;
+        max-width: fit-content;
+        text-decoration: none;
+    }
+    
+    .header .navbar .first li a{
+        color: #bb86fc;
+        font-size: 20px;
+        letter-spacing: 1px;
+        transition: all 0.3s;
+        text-decoration: none;
+    }
+    
+    .header .navbar_soc .second{
+        text-decoration: none;
+        list-style-type: none;
+        display: block;
+        justify-content: flex-end; /* Align the second navbar ul to the right */
+        margin-top: 15vh; 
+        margin-left: 30vh;
+        max-width: fit-content;
+    }
+    
+    .header .navbar_soc .second li{
+        display: block;
+        max-width: fit-content;
+        text-decoration: none;
+    }
+    
+    .header .navbar_soc .second li i{
+        font-size: 20px;
+        letter-spacing: 1px;
+        transition: all 0.3s;
+        text-decoration: none;
+    }
+    
+    .vline{
+        border-left: 2px solid #bb86fc;
+        height: 400vh;
+        position: absolute;
+        top: 101.1vh;
+        left: 50%;
+        z-index: 0;
+        max-width: fit-content;
+        opacity: 0;
+    }
+    
+    
+    
+    .about .first img,
+    .about .first .hliner,
+    .about .first .hlinel,
+    .about .first .text {
+      opacity: 0;
+      transform: translateY(100px);
+      transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+    
+    .personal .first img,
+    .personal .first .hliner,
+    .personal .first .hlinel,
+    .personal .first .text {
+      opacity: 0;
+      transform: translateY(100px);
+      transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+    
+    .sports .first img,
+    .sports .first .hliner,
+    .sports .first .hlinel,
+    .sports .first .text {
+      opacity: 0;
+      transform: translateY(100px);
+      transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+    
+    
+    .about{
+        z-index: 1;
+    }
+    
+    .about .first img{
+        width: 40vh; 
+        height: 25vh; 
+        object-fit: cover; 
+        position: absolute;
+        top: 172vh; 
+        left: 1.5vh; 
+        transform: translate(-50%, -50%); 
+        z-index: 2;
+        border-radius: 10px;
+        border: 3px solid #bb86fc;
+    
+    }
+    
+    .about .first .hliner{
+        border-bottom: 2px solid #1f1b24;
+        position: absolute;
+        bottom: -25vh;
+        max-width: 0%;    
+        z-index: 0;
+        left: 50%;
+        opacity: 0;
+    }
+    
+    .about .first .hlinel{
+        border-bottom: 2px solid #1f1b24;
+        position: absolute;
+        bottom: -20vh;
+        max-width: 0%;    
+        z-index: 0;
+        left: 10.1%;
+        opacity: 0;
+    }
+    
+    .about .first .text{
+        position: absolute;
+        bottom: -70vh;
+        max-width: 60vh;   
+        z-index: 1;
+        left: 0vh;
+        background-color: #bb86fc;
+        padding: 17px;
+        border-radius: 10px;
+    
+    }
+    
+    .sports .first .hliner{
+        border-bottom: 2px solid #bb86fc;
+        position: absolute;
+        bottom: -85vh;
+        max-width: 35%;    
+        z-index: 0;
+        left: 50%;
+        opacity: 0;
+    }
+    
+    .sports .first .hlinel{
+        border-bottom: 2px solid #bb86fc;
+        position: absolute;
+        bottom: -90vh;
+        max-width: 40%;    
+        z-index: 0;
+        left: 10.1%;
+        opacity: 0;
+    }
+    
+    .sports .first img{
+        width: 40vh; 
+        height: 25vh; 
+        object-fit: cover; 
+        position: absolute;
+        top: 252vh; 
+        left: 1.5vh; 
+        transform: translate(-50%, -50%); 
+        z-index: 1;
+        border-radius: 10px;
+        border: 3px solid #bb86fc;
+    }
+    
+    .sports .first .text{
+        position: absolute;
+        bottom: -150vh;
+        max-width: 60vh;   
+        z-index: 1;
+        left: 0vh;
+        background-color: #bb86fc;
+        padding: 17px;
+        border-radius: 10px;
+    }
+    
+    .personal .first .hliner{
+        border-bottom: 2px solid #bb86fc;
+        position: absolute;
+        bottom: -145vh;
+        max-width: 35%;    
+        z-index: 0;
+        left: 50%;
+        opacity: 0;
+    }
+    
+    .personal .first .hlinel{
+        border-bottom: 2px solid #bb86fc;
+        position: absolute;
+        bottom: -150vh;
+        max-width: 40%;    
+        z-index: 0;
+        left: 10.1%;
+        opacity: 0;
+    }
+    
+    .personal .first img{
+        width: 40vh; 
+        height: 25vh; 
+        object-fit: cover; 
+        position: absolute;
+        top: 320vh; 
+        left: 1.5vh; 
+        transform: translate(-50%, -50%); 
+        z-index: 1;
+        border-radius: 10px;
+        border: 3px solid #bb86fc;
+    }
+    
+    .personal .first .text{
+        position: absolute;
+        bottom: -218vh;
+        max-width: 60vh;   
+        z-index: 1;
+        left: 0vh;
+        background-color: #bb86fc;
+        padding: 17px;
+        border-radius: 10px;
+    }
+    
+    .app-text{
+        position: relative;
+        top: 40vh;
+        left: 5vh;
+        color: #fff;
+        z-index: 1;
+        max-width: fit-content;
+    }
+    
+    .app-text h1{
+        font-size: 30px;
+        position: relative;
+        font-weight: 700;
+        z-index: 1;
+    }
+    
+    .app-text h1 span{
+        color: #bb86fc;
+    
+    }
+    
+    .app-text h1 i{
+        color: #bb86fc; 
+        max-width: fit-content;
+        position: absolute;
+        top: 1vh;
+        left: 28.4vh;
+    }
+    
+    .hlinemain{
+        border-bottom: 2px solid #bb86fc;
+        position: absolute;
+        bottom: -1.3vh;
+        max-width: 100%;    
+        z-index: 1;
+        opacity: 0;
+    }
+    
+    
+    #projects #first img,
+    #projects #first .hliner,
+    #projects #first .hlinel,
+    #projects #first .text {
+      opacity: 0;
+      transform: translateY(100px);
+      transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+    
+    #projects #second img,
+    #projects #second .hliner,
+    #projects #second .hlinel,
+    #projects #second .text {
+      opacity: 0;
+      transform: translateY(100px);
+      transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+    
+    #projects #third img,
+    #projects #third .hliner,
+    #projects #third .hlinel,
+    #projects #third .text {
+      opacity: 0;
+      transform: translateY(100px);
+      transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+    
+    
+    #projects #first .hliner{
+        border-bottom: 2px solid #bb86fc;
+        position: absolute;
+        bottom: -200vh;
+        max-width: 35%;    
+        z-index: 0;
+        left: 0vh;
+        opacity: 0;
+    }
+    
+    #projects #first .hlinel{
+        border-bottom: 2px solid #bb86fc;
+        position: absolute;
+        bottom: -205vh;
+        max-width: 40%;    
+        z-index: 0;
+        left: 10.1%;
+        opacity: 0;
+    }
+    
+    #projects #first img{
+        width: 40vh; 
+        height: 25vh; 
+        object-fit: cover; 
+        position: absolute;
+        top: 394vh; 
+        left: 1.5vh; 
+        transform: translate(-50%, -50%); 
+        z-index: 1;
+        border-radius: 10px;
+        border: 3px solid #bb86fc;
+    }
+    
+    #projects #first #text{
+        position: absolute;
+        bottom: -292vh;
+        max-width: 60vh;   
+        z-index: 1;
+        left: 0;
+        background-color: #bb86fc;
+        padding: 17px;
+        border-radius: 10px;
+    }
+    
+    #projects #second .hliner{
+        border-bottom: 2px solid #bb86fc;
+        position: absolute;
+        bottom: -260vh;
+        max-width: 35%;    
+        z-index: 0;
+        left: 50%;
+        opacity: 0;
+    }
+    
+    #projects #second .hlinel{
+        border-bottom: 2px solid #bb86fc;
+        position: absolute;
+        bottom: -265vh;
+        max-width: 40%;    
+        z-index: 0;
+        left: 10.1%;
+        opacity: 0;
+    }
+    
+    #projects #second img{
+        width: 40vh; 
+        height: 25vh; 
+        object-fit: cover; 
+        position: absolute;
+        top: 468vh; 
+        left: 1.5vh; 
+        transform: translate(-50%, -50%); 
+        z-index: 1;
+        border-radius: 10px;
+        border: 3px solid #bb86fc;
+    }
+    
+    #projects #second #text{
+        position: absolute;
+        bottom: -366vh;
+        max-width: 60vh;   
+        z-index: 1;
+        left: 0vh;
+        background-color: #bb86fc;
+        padding: 17px;
+        border-radius: 10px;
+    }
+    
+    #projects #third .hliner{
+        border-bottom: 2px solid #bb86fc;
+        position: absolute;
+        bottom: -310vh;
+        max-width: 35%;    
+        z-index: 0;
+        left: 50%;
+        opacity: 0;
+    }
+    
+    #projects #third .hlinel{
+        border-bottom: 2px solid #bb86fc;
+        position: absolute;
+        bottom: -315vh;
+        max-width: 40%;    
+        z-index: 0;
+        left: 10.1%;
+        opacity: 0;
+    }
+    
+    #projects #third img{
+        width: 40vh; 
+        height: 25vh; 
+        object-fit: cover; 
+        position: absolute;
+        top: 546vh; 
+        left: 1.5vh; 
+        transform: translate(-50%, -50%); 
+        z-index: 1;
+        border-radius: 10px;
+        border: 3px solid #bb86fc;
+    }
+    
+    #projects #third #text{
+        position: absolute;
+        bottom: -444vh;
+        max-width: 60vh;   
+        z-index: 1;
+        left: 0vh;
+        background-color: #bb86fc;
+        padding: 17px;
+        border-radius: 10px;
+    }
+}
